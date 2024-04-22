@@ -1,46 +1,44 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    background-color: rgba(40, 45, 53, 1);
+
     font-family: inter, san-serif;
 }
 
-.container {
+nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: rgba(33, 34, 42, 1);
+    padding: 31px 21px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid  rgba(222, 235, 248, 1);;
 }
 
-.container div{
-    margin-left: 26px;
-    display: flex;
-    gap: 7px;
-    margin-top: 31px;
-    margin-bottom: 38px;
+nav img{
+    background-color: transparent;
 }
+
 
 h1{
     color: rgba(97, 218, 251, 1);
-
+    margin-left: 1rem;
+    background-color: transparent;
 }
 
 p{
-    color: rgba(222, 235, 248, 1);
     margin-right: 27px;
+    margin-left: 12rem;
 }
 
 h2{
-    color: rgba(255, 255, 255, 1);
-    margin-top: 57px;
-    margin-left: 27px;
+    padding-top: 57px;
+    padding-left: 27px;
     font-weight: bold;
     font-size: 40px;
 }
 
 ul{
     margin-top: 46px;
-    color: rgba(255, 255, 255, 1);
     margin-left: 2rem;
 }
 
@@ -48,7 +46,11 @@ ul li{
     margin-bottom: 20px;
 }
 
-.main div{
+main{
+    height: 100vh;
+}
+
+main div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,4 +59,59 @@ ul li{
 ul li::marker{
     font-size: 1.4rem;
     color: rgba(97, 218, 251, 1);
+}
+
+.container{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    margin-left: 20rem;
+    gap: 5px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.button{
+    position: relative;
+    background-color: white;
+    width: 28px;
+    height: 14px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: 1px solid black;
+}
+
+.button::before{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    content: "";
+    border-radius: 200px;
+    margin-top: .5px;
+    margin-left: 1px;
+    transition: 0.2s ease;
+}
+
+input:checked + .button{
+    background-color: white;
+}
+
+input:checked + .button::before{
+    transform: translateX(12px);
+}
+
+input{
+    display: none;
+}
+
+.light{
+    background-color: whitesmoke;
+    color: black
+}
+
+.dark{
+    background-color: rgba(33, 34, 42, 1);
+    color: rgba(222, 235, 248, 1);
 }

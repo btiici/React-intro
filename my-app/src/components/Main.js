@@ -1,8 +1,8 @@
 import reactLogo2 from "../images/reactjs-icon 2.png"
 
-export default function Main (){
+export default function Main (props){
     return(
-        <div className="main">
+        <main className={props.lightmode ? "light" : "dark"}>
             <h2>Fun facts about React</h2>
             <div>
             <ul>
@@ -14,6 +14,6 @@ export default function Main (){
             </ul>
             <img src={reactLogo2}/>
             </div>
-        </div>
+        </main>
     )
 }
